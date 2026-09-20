@@ -160,5 +160,8 @@ test('test case 2',async ({page})=>{
     await productPOM.addSpecificProductToCart(productsToAdd)
    
 })
+<<<<<<< HEAD
+>>>>>>> af49577 (added test case 2)
+=======
 >>>>>>> af49577 (added test case 2)
 })
