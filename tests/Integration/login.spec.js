@@ -146,4 +146,19 @@ test('verify to add specific products to cart',async ({page})=>{
    
 })
 
+<<<<<<< HEAD
+=======
+test('test case 1',async ({page})=>{
+    // await page.pause()
+    await expect ( page.locator(productLocators.product_Name).first()).toBeVisible()
+    await productPOM.addSpecificProductToCart(productsToAdd)
+   
+})
+test('test case 2',async ({page})=>{
+    // await page.pause()
+    await expect ( page.locator(productLocators.product_Name).first()).toBeVisible()
+    await productPOM.addSpecificProductToCart(productsToAdd)
+   
+})
+>>>>>>> af49577 (added test case 2)
 })
