@@ -70,7 +70,7 @@ test("About page",async ({page})=>{
     //await expect(page.locator(productLocators.openMenu)).toBeVisible()
 
     await productPOM.clickAbout()
-
+//super
     await expect(page).toHaveURL('https://saucelabs.com/')
     await expect(page.getByRole('link',{name:"Book a Demo"}).first()).toBeVisible()
     await expect(page.locator(productLocators.menuAbout_bookADemoNew).first()).toBeVisible()
