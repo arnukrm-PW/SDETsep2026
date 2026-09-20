@@ -1,27 +1,27 @@
 
 const {test,expect}=require('@playwright/test')
-const {BASE_URL,USERNAME,PASSWORD} = require('../utils/envConfig')
+const {BASE_URL,USERNAME,PASSWORD} = require('../../utils/envConfig')
 //POM
 
-const CartPOM = require('../pages/cartPage/CartPOM')
-const CheckoutYourInfo_POM = require('../pages/checkoutYourInfoPage/CheckoutYourInfo_POM')
-const LoginPOM = require('../pages/LoginPage/LoginPOM')
-const OverviewCompletePOM = require('../pages/OverviewComplete/OverviewCompletePOM')
-const OverviewPagePOM = require('../pages/overviewPage/OverviewPagePOM')
-const ProductPOM = require('../pages/ProductPage/ProductPOM')
+const CartPOM = require('../../pages/cartPage/CartPOM')
+const CheckoutYourInfo_POM = require('../../pages/checkoutYourInfoPage/CheckoutYourInfo_POM')
+const LoginPOM = require('../../pages/LoginPage/LoginPOM')
+const OverviewCompletePOM = require('../../pages/OverviewComplete/OverviewCompletePOM')
+const OverviewPagePOM = require('../../pages/overviewPage/OverviewPagePOM')
+const ProductPOM = require('../../pages/ProductPage/ProductPOM')
 
 
 
 //locators
-const cartLocators = require('../locators/cartLocators/cartLocator')
-const checkoutYourInfoLocator = require('../locators/checkoutYourInfoLocator/checkoutYourInfoLocator')
-const loginLocators = require('../locators/loginLocators/loginLocator')
-const overviewLocator = require('../locators/overview/overviewLocator')
-const overviewComplete = require('../locators/overviewComplete/overviewComplete')
-const productLocators = require('../locators/productLocators/productLocators')
+const cartLocators = require('../../locators/cartLocators/cartLocator')
+const checkoutYourInfoLocator = require('../../locators/checkoutYourInfoLocator/checkoutYourInfoLocator')
+const loginLocators = require('../../locators/loginLocators/loginLocator')
+const overviewLocator = require('../../locators/overview/overviewLocator')
+const overviewComplete = require('../../locators/overviewComplete/overviewComplete')
+const productLocators = require('../../locators/productLocators/productLocators')
 
 //Test Data
-const productsToAdd = require('../test-data/products')
+const productsToAdd = require('../../test-data/products')
 
 
 
