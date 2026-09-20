@@ -62,7 +62,7 @@ test("login to SD",async ({page})=>{
    await  expect(page).toHaveURL(/inventory/)
    await expect(page.locator(productLocators.openMenu)).toBeVisible()
    await page.waitForTimeout(2000)
-   //await page.pause() updated the login
+   //await page.pause() updated the login with wrong URL
 })
     
 test("About page",async ({page})=>{
