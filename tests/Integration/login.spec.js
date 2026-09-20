@@ -147,13 +147,17 @@ test('verify to add specific products to cart',async ({page})=>{
 })
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 59d612b (added test case 1)
 test('test case 1',async ({page})=>{
     // await page.pause()
     await expect ( page.locator(productLocators.product_Name).first()).toBeVisible()
     await productPOM.addSpecificProductToCart(productsToAdd)
    
 })
+<<<<<<< HEAD
 test('test case 2',async ({page})=>{
     // await page.pause()
     await expect ( page.locator(productLocators.product_Name).first()).toBeVisible()
@@ -164,4 +168,6 @@ test('test case 2',async ({page})=>{
 >>>>>>> af49577 (added test case 2)
 =======
 >>>>>>> af49577 (added test case 2)
+=======
+>>>>>>> 59d612b (added test case 1)
 })
