@@ -58,14 +58,14 @@ await loginPOM.setPassword(PASSWORD)
 await loginPOM.clickLogin()
 
     })
-test("login to SD",async ({page})=>{
+test("1. login to SD",async ({page})=>{
    await  expect(page).toHaveURL(/inventory/)
    await expect(page.locator(productLocators.openMenu)).toBeVisible()
    await page.waitForTimeout(2000)
    //await page.pause() updated the login with wrong URL
 })
     
-test("About page",async ({page})=>{
+test("2. About page",async ({page})=>{
     //await page.pause()
     //await expect(page.locator(productLocators.openMenu)).toBeVisible()
 
@@ -81,7 +81,7 @@ test("About page",async ({page})=>{
     await page.waitForTimeout(2000)
     //await page.pause()
 })
-test("validate product inventorys",async({page})=>{
+test("3. validate product inventorys",async({page})=>{
     //await page.pause()
     await productPOM.validateAllProductDisplayed()
 await productPOM.addFirstProduct()
@@ -91,14 +91,14 @@ await productPOM.addFirstProduct()
  
 })
 
-test("Logout page",async ({page})=>{
+test("4. Logout page",async ({page})=>{
     await expect(page.locator(productLocators.openMenu)).toBeVisible()
     await productPOM.clickLogout()
     expect(page).toHaveURL('https://www.saucedemo.com/')
     await page.waitForTimeout(2000)
     //await page.pause()
 })
-test('click on Add to Cart for product bike-light',async({page})=>{
+test('5. click on Add to Cart for product bike-light',async({page})=>{
    // await expect(page.locator(productLocators.product_bikeLight).filter({hasText:'Sauce Labs Bike Light'})).toBeVisible()
     await productPOM.clickOnProduct('Sauce Labs Bike Light')
     await productPOM.clickCart()
@@ -106,7 +106,7 @@ test('click on Add to Cart for product bike-light',async({page})=>{
     await page.waitForTimeout(2000)
 })
 
-test('click on CartMenu page',async ({page})=>{
+test('6. click on CartMenu page',async ({page})=>{
 // await page.pause()
     await expect(page.locator(productLocators.cartMenu)).toBeVisible()
     await productPOM.clickCart()
@@ -115,7 +115,7 @@ test('click on CartMenu page',async ({page})=>{
     // await page.pause()
     await page.waitForTimeout(2000)
 })
-test("click on Continue Shopping",async ({page})=>{
+test("7. click on Continue Shopping",async ({page})=>{
     // await page.pause()
     await expect(page.locator(productLocators.cartMenu)).toBeVisible()
     await productPOM.clickCart()
@@ -124,7 +124,7 @@ test("click on Continue Shopping",async ({page})=>{
     await expect(page.locator(productLocators.productTitle)).toContainText('Products')
     await page.waitForTimeout(2000)
 })
-test("verify continue shopping button on cart page",async ({page})=>{
+test("8. verify continue shopping button on cart page",async ({page})=>{
 
 //await page.pause()
     await productPOM.clickOnProduct('Sauce Labs Backpack')
@@ -139,7 +139,7 @@ test("verify continue shopping button on cart page",async ({page})=>{
     await expect(page).toHaveURL(/inventory/)
     await page.waitForTimeout(2000)
 })
-test('verify to add specific products to cart',async ({page})=>{
+test('9. verify to add specific products to cart',async ({page})=>{
     // await page.pause()
     await expect ( page.locator(productLocators.product_Name).first()).toBeVisible()
     await productPOM.addSpecificProductToCart(productsToAdd)
