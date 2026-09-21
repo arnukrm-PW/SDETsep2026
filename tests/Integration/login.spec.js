@@ -165,7 +165,7 @@ test('test case 3',async ({page})=>{
    
 })
 test('test case 4',async ({page})=>{
-    // await page.pause()
+    // await page.pause() dummy test 
     await expect ( page.locator(productLocators.product_Name).first()).toBeVisible()
     await productPOM.addSpecificProductToCart(productsToAdd)
    
