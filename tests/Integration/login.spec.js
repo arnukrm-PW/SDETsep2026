@@ -164,4 +164,10 @@ test('test case 3',async ({page})=>{
     await productPOM.addSpecificProductToCart(productsToAdd)
    
 })
+test('test case 4',async ({page})=>{
+    // await page.pause()
+    await expect ( page.locator(productLocators.product_Name).first()).toBeVisible()
+    await productPOM.addSpecificProductToCart(productsToAdd)
+   
+})
 })
