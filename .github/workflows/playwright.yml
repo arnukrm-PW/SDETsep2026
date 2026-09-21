@@ -28,7 +28,7 @@ jobs:
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
     - name: Run Playwright tests (Shard ${{ matrix.shard }})
-      run: npx playwright test tests/Integration  --shard=${{matrix.shard}}/4
+      run: npx playwright test   --shard=${{matrix.shard}}/4
     - uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
       with:
