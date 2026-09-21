@@ -62,7 +62,7 @@ test("login to SD",async ({page})=>{
    await  expect(page).toHaveURL(/inventory/)
    await expect(page.locator(productLocators.openMenu)).toBeVisible()
    await page.waitForTimeout(2000)
-   //await page.pause() INtegrations dual
+   //await page.pause()
 })
     
 test("About page",async ({page})=>{
@@ -146,28 +146,22 @@ test('verify to add specific products to cart',async ({page})=>{
    
 })
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 59d612b (added test case 1)
 test('test case 1',async ({page})=>{
     // await page.pause()
     await expect ( page.locator(productLocators.product_Name).first()).toBeVisible()
     await productPOM.addSpecificProductToCart(productsToAdd)
    
 })
-<<<<<<< HEAD
 test('test case 2',async ({page})=>{
     // await page.pause()
     await expect ( page.locator(productLocators.product_Name).first()).toBeVisible()
     await productPOM.addSpecificProductToCart(productsToAdd)
    
 })
-<<<<<<< HEAD
->>>>>>> af49577 (added test case 2)
-=======
->>>>>>> af49577 (added test case 2)
-=======
->>>>>>> 59d612b (added test case 1)
+test('test case 3',async ({page})=>{
+    // await page.pause()
+    await expect ( page.locator(productLocators.product_Name).first()).toBeVisible()
+    await productPOM.addSpecificProductToCart(productsToAdd)
+   
+})
 })
