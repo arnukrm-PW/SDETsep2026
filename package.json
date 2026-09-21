@@ -3,7 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "playwright test --retries=2",
+    "E2E":"playwright test tests/E2E --retries=2",
+    "E2E:headed":"playwright test tests/E2E --headed --retries=2",
+    "sanity": "playwright test tests/Integration login.spec.js --retries=2",
+    "test:headed":"playwright test --headed --retries=2"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",

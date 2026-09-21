@@ -2,7 +2,7 @@ const {test,expect} = require('@playwright/test')
 const { faker } = require('@faker-js/faker')
 const {createUser} = require('../../factory/dataFactory')
 
-test("login fakers",async ({page})=>{
+test("1. login fakers",async ({page})=>{
     const user = createUser()
     await page.goto("https://automationexercise.com/login")
    // await page.pause()
