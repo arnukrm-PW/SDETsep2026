@@ -1,4 +1,8 @@
 const{test,expect}=require('@playwright/test')
+const path = require('path')
+const amanFile = path.resolve(__dirname,'../../test-asset/aman.png')
+const shivaFile = path.resolve(__dirname,'../../test-asset/shiva.png')
+const vivekFile = path.resolve(__dirname,'../../test-asset/vivek.png')
 
 test("tc01_Extract all product names.",async({page})=>{
     //await page.pause()
@@ -97,7 +101,7 @@ test("tc07_Handle iframe.",async({page})=>{
 test("tc08_upload files",async({page})=>{
    // await page.pause()
     await page.goto("https://practice-automation.com/file-upload/?utm_source=chatgpt.com")
- await page.locator('#file-upload').setInputFiles("C:\\Users\\user\\OneDrive\\Pictures\\shiva.png")
+ await page.locator('#file-upload').setInputFiles(amanFile)
 await page.locator('#upload-btn').click()
 const errorMessage=await page.getByText('Thank you for your message. It has been sent.').first()
 await expect(errorMessage).toBeVisible()
@@ -113,7 +117,7 @@ test("tc0 8.5_Multiple upload files",async({page})=>{
         throw error
     }
    // await page.locator('a[href="/Elements/Files"]').click()
- await page.locator('#multiFileUpload').setInputFiles(["C:\\Users\\user\\OneDrive\\Pictures\\shiva.png","C:\\Users\\user\\OneDrive\\Pictures\\vivek.png"])
+ await page.locator('#multiFileUpload').setInputFiles([amanFile,shivaFile,vivekFile])
 //await page.locator('#multiFileUpload').click()
 //const errorMessage=await page.getByText('Thank you for your message. It has been sent.').first()
 //await expect(errorMessage).toBeVisible()
@@ -126,7 +130,7 @@ test("tc09_Download a normal file.",async({page})=>{
 const newPromisePage= page.waitForEvent("download")
 await page.getByRole('link',{name:'Download'}).nth(2).click()
 const newDownload = await newPromisePage
-     console.log(`downloaded File name ${newDownload.suggestedFilename()}   `)
+     console.log(`downloaded File name ${newDownload.suggestedFilename()}`)
     await newDownload.saveAs(`newDownload ${newDownload.suggestedFilename()}`)
 
 
